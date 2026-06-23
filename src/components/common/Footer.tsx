@@ -41,7 +41,9 @@ const Circle2 = styled.svg`
   }
 `;
 const ResumeWrapper = styled.a`
-  position: relative;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
   cursor: pointer;
   width: 200px;
   height: 150px;
@@ -79,7 +81,9 @@ const Text = styled.h3`
   transform: translateX(-50%);
   color: ${(props) => props.theme.color.textColor};
 `;
-const DetailWrapper = styled.div``;
+const DetailWrapper = styled.div`
+width: 100%;
+`;
 const LinkBtnWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -114,7 +118,7 @@ export default function Footer() {
   return (
     <Base>
       <ResumeWrapper
-        href={process.env.PUBLIC_URL + "/assets/resume.pdf"}
+        href={process.env.PUBLIC_URL + "/assets/이력서_260623.pdf"}
         target="_blank"
       >
         <Circle1
@@ -135,17 +139,17 @@ export default function Footer() {
       </ResumeWrapper>
       <DetailWrapper>
         <LinkBtnWrapper>
-          <a href="https://github.com/hwanyb" target="_blank">
+          {/* <a href="https://github.com/hwanyb" target="_blank">
             <LinkBtn>Github</LinkBtn>
-          </a>
-          <a href="https://hwanyb.github.io/" target="_blank">
+          </a> */}
+          {/* <a href="https://hwanyb.github.io/" target="_blank">
             <LinkBtn>Blog</LinkBtn>
-          </a>
+          </a> */}
         </LinkBtnWrapper>
         <UpdateDate>
-          Last Update : <b>2023.05.13</b>
+          Last Update : <b>2026.06.23</b>
         </UpdateDate>
-        <Rights>Copyright 2023. byunhwanhee all rights reserved.</Rights>
+        <Rights>Copyright 2026. byunhwanhee all rights reserved.</Rights>
       </DetailWrapper>
     </Base>
   );

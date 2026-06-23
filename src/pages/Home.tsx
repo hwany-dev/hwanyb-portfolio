@@ -57,7 +57,7 @@ export default function Home() {
         <Greeting>
           <b>안녕하세요 !</b>
           <br />
-          프론트엔드 개발자를 꿈꾸는
+          4년차 프론트엔드 개발자
           <br />
           <b>변환희</b>입니다.
         </Greeting>

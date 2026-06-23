@@ -9,8 +9,9 @@ import { Label } from "../pages/Contact";
 
 const Base = styled.div`
   width: 100%;
+  height: calc(100% - 120px);
   position: relative;
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
 `;
 const CommentInputWrapper = styled.div`
   display: grid;
@@ -88,13 +89,13 @@ const CommentList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  height: 400px;
+  height: calc(100% - 100px);
   overflow-y: auto;
   padding: 1rem 2rem 1rem 0.2rem;
   align-items: center;
   width: 100%;
   @media ${(props) => props.theme.windowSize.mobile} {
-    height: 250px;
+    /* height: 250px; */
   }
 `;
 const CommentItem = styled.li`

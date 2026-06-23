@@ -6,25 +6,25 @@ import Footer from "../components/common/Footer";
 import { DarkModeProps } from "../components/common/Layout";
 
 const Base = styled.div`
-  display: flex;
+  /* display: flex; */
   width: 100%;
   height: 100%;
-  flex-direction: column;
+  /* flex-direction: column; */
   position: relative;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 `;
 const ContactContainer = styled.div`
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3rem;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* margin-top: 3rem; */
 `;
 const ContactWrapper = styled.div`
   display: flex;
   align-items: center;
   @media ${(props) => props.theme.windowSize.tablet} {
-  flex-direction: column;
-  align-items: start;
+    flex-direction: column;
+    align-items: start;
   }
 `;
 export const Label = styled.label`
@@ -46,14 +46,14 @@ export const Label = styled.label`
 const Desc = styled.p`
   margin-left: 1rem;
   @media ${(props) => props.theme.windowSize.tablet} {
-  margin-left: 0;
+    margin-left: 0;
   }
 `;
 const A = styled.a`
   margin-left: 1rem;
   color: ${(props) => props.theme.color.textColor};
   @media ${(props) => props.theme.windowSize.tablet} {
-  margin-left: 0;
+    margin-left: 0;
   }
 `;
 
@@ -67,14 +67,14 @@ export default function Contact({ isDarkMode, setIsDarkMode }: DarkModeProps) {
         </ContactWrapper>
         <ContactWrapper>
           <Label>E-mail</Label>
-          <Desc>mnn9502@naver.com</Desc>
+          <Desc>hwany.byun@gmail.com</Desc>
         </ContactWrapper>
-        <ContactWrapper>
+        {/* <ContactWrapper>
           <Label>Kakao</Label>
           <A href="https://open.kakao.com/o/skoIijjf" target="_blank">
             오픈채팅방 링크
           </A>
-        </ContactWrapper>
+        </ContactWrapper> */}
       </ContactContainer>
       <Comment isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </Base>

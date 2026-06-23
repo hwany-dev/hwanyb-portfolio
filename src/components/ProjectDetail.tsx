@@ -241,11 +241,11 @@ export default function ProjectDetail({
                   Github
                 </a>
               </button>
-              <button>
+              {/* <button>
                 <a href={selectedData?.demoLink} target="_blank">
                   {selectedData?.titleEn}
                 </a>
-              </button>
+              </button> */}
             </LinkBtnWrapper>
             <Desc>{selectedData?.short}</Desc>
           </Header>

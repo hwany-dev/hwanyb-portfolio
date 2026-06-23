@@ -22,9 +22,9 @@ const ProjectsWrapper = styled(Swiper)`
   padding: 1rem 2rem;
   width: 100%;
   height: 80%;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   @media ${(props) => props.theme.windowSize.mobile} {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 `;
 const ProjectItem = styled(SwiperSlide)`

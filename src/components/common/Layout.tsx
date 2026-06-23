@@ -14,21 +14,21 @@ const Base = styled.div<{ innerHeight: number }>`
   width: 100vw;
   height: 100vh;
   min-height: 100vh;
-  padding: 0 200px;
+  padding: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   @media ${(props) => props.theme.windowSize.desktop} {
-    padding: 0 100px;
+    padding: 0 70px;
   }
   @media ${(props) => props.theme.windowSize.laptop} {
-    padding: 0 50px;
-  }
-  @media ${(props) => props.theme.windowSize.tablet} {
     padding: 0 30px;
   }
-  @media ${(props) => props.theme.windowSize.mobile} {
+  @media ${(props) => props.theme.windowSize.tablet} {
     padding: 0 20px;
+  }
+  @media ${(props) => props.theme.windowSize.mobile} {
+    padding: 0 10px;
     /* mobile viewport bug fix */
     /* iOS only */
     @supports (-webkit-touch-callout: none) {

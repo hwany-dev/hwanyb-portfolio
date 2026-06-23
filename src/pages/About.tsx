@@ -128,10 +128,11 @@ const DetailWrapper = styled.ul`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  row-gap: 10px;
   @media ${(props) => props.theme.windowSize.mobile} {
     flex-direction: column;
     margin: 0 auto;
+    row-gap: 5px;
   }
 `;
 const Title = styled.h2`
@@ -142,7 +143,15 @@ const Title = styled.h2`
     text-align: center;
   }
 `;
-const DetailItem = styled.li``;
+const DetailItem = styled.li`
+  width: 33.333%;
+  @media ${(props) => props.theme.windowSize.desktop} {
+    width: 50%;
+  }
+  @media ${(props) => props.theme.windowSize.mobile} {
+    width: 100%;
+  }
+`;
 export const Label = styled.label`
   display: flex;
   align-items: center;
@@ -272,7 +281,28 @@ export default function About() {
 
         <DetailContainer>
           <div>
+            <Title>Career.</Title>
+            <DetailWrapper></DetailWrapper>
+            <DetailWrapper>
+              {[
+                {
+                  id: "piolink",
+                  duration: "파이오링크",
+                  title: "2023.06 ~ 재직중",
+                  desc: "React ·  JavaScript · MobX · Ant Design · SCSS · REST API · i18n · Figma · Webpack · Openstack\n\nOpenStack 기반 프라이빗 HCI 관리 플랫폼 프론트엔드 개발 담당",
+                },
+              ].map((item) => (
+                <DetailItem key={item.id}>
+                  <Label>{item.duration}</Label>
+                  <SubTitle>{item.title}</SubTitle>
+                  <Desc>{item.desc}</Desc>
+                </DetailItem>
+              ))}
+            </DetailWrapper>
+          </div>
+          <div>
             <Title>Education.</Title>
+            <DetailWrapper></DetailWrapper>
             <DetailWrapper>
               {educationData.map((item) => (
                 <DetailItem key={item.id}>
@@ -297,7 +327,14 @@ export default function About() {
           </div>
           <div>
             <Title>Skill Set.</Title>
-            <SkillContainer>
+            <span style={{ display: "flex", alignItems: "center", gap: 24 }}>
+              <Label>주력</Label>React, JavaScript(ES6+), MobX, Ant Design, SCSS
+            </span>
+            <span style={{ display: "flex", alignItems: "center", gap: 24 }}>
+              <Label>사용 경험</Label>TypeScript, Redux, i18n, Webpack, Figma,
+              REST API, Git, Styled-Component
+            </span>
+            {/* <SkillContainer>
               <SkillWrapper>
                 <Desc id="skill">Front-End</Desc>
                 {frontendSkillData.map((item) => (
@@ -338,7 +375,7 @@ export default function About() {
                   </SkillItem>
                 ))}
               </SkillWrapper>
-            </SkillContainer>
+            </SkillContainer> */}
           </div>
         </DetailContainer>
       </Container>
