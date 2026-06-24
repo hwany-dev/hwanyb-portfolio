@@ -68,8 +68,8 @@ const ResumeWrapper = styled.a`
   }
   @media ${(props) => props.theme.windowSize.mobile} {
     width: 150px;
-    height: 100px;
-    margin-bottom: 4rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 `;
 

@@ -25,6 +25,7 @@ const ProjectsWrapper = styled(Swiper)`
   /* margin-bottom: 50px; */
   @media ${(props) => props.theme.windowSize.mobile} {
     /* margin-bottom: 30px; */
+    height: 100%;
   }
 `;
 const ProjectItem = styled(SwiperSlide)`

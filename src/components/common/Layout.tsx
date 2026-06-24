@@ -40,8 +40,7 @@ const Base = styled.div<{ innerHeight: number }>`
 `;
 const Main = styled.main<{ location: string }>`
   width: 100%;
-  height: calc(100vh - 100px);
-  height: calc(100dvh - 100px);
+  height: calc(100% - 100px);
   /* bottom: 0; */
   @media ${(props) => props.theme.windowSize.tablet} {
     ${props => props.location === "/about" && css`
