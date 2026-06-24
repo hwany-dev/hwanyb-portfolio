@@ -46,6 +46,11 @@ const ProjectItem = styled(SwiperSlide)`
       background-color: rgba(255, 255, 255, 0.5);
     }
   }
+  @media ${(props) => props.theme.windowSize.mobile} {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.35);
+  }
 `;
 const ThumbnailWrapper = styled.div`
   background-color: rgba(255, 255, 255, 0.3);
@@ -163,6 +168,8 @@ export default function Projects() {
                   <ThumbnailWrapper>
                     <ThumbnailImg
                       src={process.env.PUBLIC_URL + item.thumbnail}
+                      loading="lazy"
+                      decoding="async"
                     />
                   </ThumbnailWrapper>
                   <Desc>{item.scale}</Desc>

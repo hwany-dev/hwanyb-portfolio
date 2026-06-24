@@ -118,7 +118,7 @@ export default function Footer() {
   return (
     <Base>
       <ResumeWrapper
-        href={process.env.PUBLIC_URL + "/assets/이력서_260623.pdf"}
+        href={process.env.PUBLIC_URL + "/assets/resume.pdf"}
         target="_blank"
       >
         <Circle1

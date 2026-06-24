@@ -18,11 +18,11 @@ const Introduce = styled.div`
   @media ${(props) => props.theme.windowSize.laptop} {
     margin-top: 25%;
   }
-  @media ${(props) => props.theme.windowSize.laptop} {
-    margin-top: 40%;
+  @media ${(props) => props.theme.windowSize.tablet} {
+    margin-top: 30%;
   }
   @media ${(props) => props.theme.windowSize.mobile} {
-    margin-top: 15%;
+    margin-top: 20%;
     text-align: center;
   }
 `;

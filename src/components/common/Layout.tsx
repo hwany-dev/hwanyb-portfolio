@@ -13,11 +13,18 @@ import Contact from "../../pages/Contact";
 const Base = styled.div<{ innerHeight: number }>`
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
+  min-height: 100dvh;
   padding: 0 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* iOS Safari fallback for browsers without dvh support */
+  @supports (-webkit-touch-callout: none) and (not (height: 1dvh)) {
+    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
+  }
   @media ${(props) => props.theme.windowSize.desktop} {
     padding: 0 70px;
   }
@@ -29,17 +36,12 @@ const Base = styled.div<{ innerHeight: number }>`
   }
   @media ${(props) => props.theme.windowSize.mobile} {
     padding: 0 10px;
-    /* mobile viewport bug fix */
-    /* iOS only */
-    @supports (-webkit-touch-callout: none) {
-      height: -webkit-fill-available;
-      min-height: -webkit-fill-available;
-    }
   }
 `;
 const Main = styled.main<{ location: string }>`
   width: 100%;
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
+  height: calc(100dvh - 100px);
   /* bottom: 0; */
   @media ${(props) => props.theme.windowSize.tablet} {
     ${props => props.location === "/about" && css`

@@ -328,11 +328,10 @@ export default function About() {
           <div>
             <Title>Skill Set.</Title>
             <span style={{ display: "flex", alignItems: "center", gap: 24 }}>
-              <Label>주력</Label>React, JavaScript(ES6+), MobX, Ant Design, SCSS
+              <Label>주력</Label>React · TypeScript · JavaScript (ES6+) · Redux · MobX · Ant Design · SCSS · styled-components · REST API
             </span>
             <span style={{ display: "flex", alignItems: "center", gap: 24 }}>
-              <Label>사용 경험</Label>TypeScript, Redux, i18n, Webpack, Figma,
-              REST API, Git, Styled-Component
+              <Label>사용 경험</Label>Next.js · Vue.js · Zustand · Three.js · OpenLayers · Map API · WebSocket · Unit Test (Jest)
             </span>
             {/* <SkillContainer>
               <SkillWrapper>

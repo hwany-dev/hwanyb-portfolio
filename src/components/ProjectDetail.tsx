@@ -6,20 +6,19 @@ import styled, { css } from "styled-components";
 const Base = styled.div`
   width: 100vw;
   height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   z-index: 1111;
   top: 0;
   left: 0;
-  @media ${(props) => props.theme.windowSize.mobile} {
-    /* mobile viewport bug fix */
-    /* iOS only */
-    @supports (-webkit-touch-callout: none) {
-      height: -webkit-fill-available;
-      min-height: -webkit-fill-available;
-    }
+  @supports (-webkit-touch-callout: none) and (not (height: 1dvh)) {
+    height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
   }
 `;
 const Container = styled.div`
@@ -251,7 +250,7 @@ export default function ProjectDetail({
           </Header>
 
           <MockupImgWrapper>
-            <MockupImg src={process.env.PUBLIC_URL + selectedData?.mockup!} />
+            <MockupImg src={process.env.PUBLIC_URL + selectedData?.mockup!} loading="lazy" decoding="async" />
           </MockupImgWrapper>
           <InfoWrapper>
             <InfoItem>
@@ -275,7 +274,7 @@ export default function ProjectDetail({
             {selectedData?.features.map((feature) => (
               <FeatureItem key={feature.id}>
                 <FeatureImgWrapper>
-                  <FeatureImg src={process.env.PUBLIC_URL + feature?.img} />
+                  <FeatureImg src={process.env.PUBLIC_URL + feature?.img} loading="lazy" decoding="async" />
                 </FeatureImgWrapper>
                 <FeatureTextWrapper>
                   <FeatureTitle>{feature.title}</FeatureTitle>

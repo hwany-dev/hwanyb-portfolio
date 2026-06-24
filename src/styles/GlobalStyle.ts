@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
             border-radius: 10px;
     }
     html {
+        height: 100%;
         font-size: 16px;
         font-family: 'Pretendard';
         overflow: hidden;
@@ -38,9 +39,11 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     body {
+        height: 100%;
         transition: background-color 0.5s ease-in-out, color 1s ease-in-out;
         background-color: ${(props) => props.theme.color.bgColor};
         color: ${(props) => props.theme.color.textColor};
+        -webkit-overflow-scrolling: touch;
     }
     textarea {
         resize: none;

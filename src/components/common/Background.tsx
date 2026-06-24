@@ -24,6 +24,8 @@ const Yellow = styled.svg<{ location: string }>`
           filter: blur(100px);
           transform: translate(-30vw, 50vh);
           @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(60px);
+            width: 280px;
           }
         `
       : props.location === "/about"
@@ -31,17 +33,29 @@ const Yellow = styled.svg<{ location: string }>`
           width: 700px;
           filter: blur(150px);
           transform: translate(-60vw, 10vh) rotate(20deg);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(80px);
+            width: 350px;
+          }
         `
       : props.location === "/projects"
       ? css`
           width: 500px;
           filter: blur(150px);
           transform: translate(-10vw, 50vh) rotate(174deg);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(80px);
+            width: 280px;
+          }
         `
       : css`
           width: 405px;
           filter: blur(100px);
           transform: translate(-60vw, 50vh) rotate(174deg);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(60px);
+            width: 250px;
+          }
         `}
 `;
 const Blue = styled.svg<{ location: string }>`
@@ -56,6 +70,8 @@ const Blue = styled.svg<{ location: string }>`
           @media ${(props) => props.theme.windowSize.mobile} {
             transform: translate(10vw, -5vh);
             opacity: 0.7;
+            filter: blur(60px);
+            width: 320px;
           }
         `
       : props.location === "/about"
@@ -63,17 +79,29 @@ const Blue = styled.svg<{ location: string }>`
           width: 800px;
           transform: translate(5vw, 30vh) rotate(45deg);
           filter: blur(150px);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(80px);
+            width: 400px;
+          }
         `
       : props.location === "/projects"
       ? css`
           width: 1000px;
           transform: translate(-55vw, -5vh) rotate(80deg);
           filter: blur(200px);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(100px);
+            width: 500px;
+          }
         `
       : css`
           width: 660px;
           transform: translate(-20vw, -5vh) rotate(280deg);
           filter: blur(100px);
+          @media ${(props) => props.theme.windowSize.mobile} {
+            filter: blur(60px);
+            width: 350px;
+          }
         `}
 `;
 export default function Background() {
